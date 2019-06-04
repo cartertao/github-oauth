@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <a id="getCode">点我</a>
+</body>
+    <script>
+    $("#getCode").click(function(){
+         $.ajax({
+            url:"/a",
+            data:"",
+            type:"get",
+            dataType:"json",
+            success:function(msg){
+                var url = msg.url;
+                window.location.href=url;
+            }
+        })
+    })
+
+    </script>
+</html>
